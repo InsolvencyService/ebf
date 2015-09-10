@@ -1,0 +1,11 @@
+<template name="listEbfs">
+  {{#if Template.subscriptionsReady}}
+     {{#each list}}
+      <p>
+        {{sourceType}} : {{sourceId}}
+      </p>
+     {{/each}}
+   {{else}}
+       <p>Loading...</p>
+   {{/if}}
+</template>

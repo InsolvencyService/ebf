@@ -1,0 +1,23 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+meteorhacks:npm
+fourseven:scss
+
+kadira:flow-router
+kadira:blaze-layout
+meteorhacks:picker
+
+jagi:astronomy
+jagi:astronomy-validators
+jagi:astronomy-relations
+jagi:astronomy-timestamp-behavior
+
+check
+
+
+npm-container

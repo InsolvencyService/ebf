@@ -5,7 +5,7 @@ var testRoutes = FlowRouter.group({
 
 testRoutes.route('/', {
   action: function() {
-    BlazeLayout.render('ebfLayout', {
+    BlazeLayout.render('masterLayout', {
       main: 'listEbfs'
     });
    }

@@ -1,0 +1,19 @@
+#global-header {
+  a#logo.content {
+    font-size: 19px;
+  }
+  #logo {
+    img {
+      width: auto !important;
+      position: relative;
+
+      height: 34px;
+      padding-right: 6px;
+      float: left;
+      display: inline;
+      line-height: inherit;
+      border: none;
+      top: -6px;
+    }
+  }
+}

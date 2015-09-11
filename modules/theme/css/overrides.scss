@@ -1,12 +1,8 @@
 #global-header {
-  a#logo.content {
-    font-size: 19px;
-  }
   #logo {
     img {
       width: auto !important;
       position: relative;
-
       height: 34px;
       padding-right: 6px;
       float: left;
@@ -15,5 +11,16 @@
       border: none;
       top: -6px;
     }
+    &.content {
+      font-size: 19px;
+      line-height: 30px;
+    }
+  }
+}
+#wrapper {
+  .inner-block {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2em;
   }
 }

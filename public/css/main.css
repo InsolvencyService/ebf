@@ -392,6 +392,8 @@ pre, code {
   text-align: left;
   margin: 0 auto;
   width: auto;
+  padding-left: 30px;
+    padding-right: 30px;
   max-width: 1020px; }
   #content:after {
     content: "";
@@ -1155,4 +1157,3 @@ ul li, ol li {
     .icon-step-13 {
       background-image: url("../../images/icons/icon-steps/icon-step-13-2x.png");
       background-size: 100%; } }
-

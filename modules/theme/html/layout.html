@@ -29,7 +29,23 @@
   {{> cookieHeader }}
   {{> header }}
 
-  {{> Template.dynamic template=main}}
+
+  <main id="wrapper" role="main">
+    <div id="content">
+      <div class="inner-block">
+        <div class="phase-banner">
+          <p>
+            <strong class="phase-tag">ALPHA</strong>
+            This is a new service - your
+            <a href="#" target="_blank">feedback</a>
+            will help us improve it
+          </p>
+        </div>
+      </div>
+      {{> Template.dynamic template=main}}
+    </div>
+  </main>
+
 
   {{> footer }}
 </template>
@@ -71,41 +87,50 @@
       <div class="header-bar"></div>
     </div>
   </div>
+
 </template>
 
 <template name="footer">
 
-<footer role="contentinfo" id="footer" class="group js-footer">
-
+  <footer class="group js-footer" id="footer" role="contentinfo">
 
     <div class="footer-wrapper">
 
-        <div class="footer-meta">
+      <div class="footer-meta">
 
-            <div class="footer-meta-inner">
+        <div class="footer-meta-inner">
 
-                 <ul class="footer__nav" style="width:100%">
-                    <li class="small-btm-margin" style="text-align:left; display:block">
-					<a class="bold-medium" href="../contact-us.html">Contact us</a></li>
-                 </ul>
-                  <ul class="footer__nav" style="clear:left; text-align:left; display:block">
-                    <li class="footer__link" style=" ">
-					<a href="../privacy.html">Privacy</a></li>
-                    <li class="footer__link" style=""><a href="../cookies.html">Cookies</a></li>
-                    <li class="footer__link" style=" ">Built by <a href="http://www.gov.uk/insolvency-service" target="_blank">The Insolvency Service</a></li>
-                </ul>
+          <ul class="footer__nav" style="width:100%">
+            <li class="small-btm-margin" style="text-align:left; display:block">
+              <a class="bold-medium" href="../contact-us.html">Contact us</a>
+            </li>
+          </ul>
+          <ul class="footer__nav" style="clear:left; text-align:left; display:block">
+            <li class="footer__link" style=" ">
+              <a href="../privacy.html">Privacy</a>
+            </li>
+            <li class="footer__link" style="">
+              <a href="../cookies.html">Cookies</a>
+            </li>
+            <li class="footer__link" style=" ">Built by
+              <a href="http://www.gov.uk/insolvency-service" target="_blank">The Insolvency Service</a>
+            </li>
+          </ul>
 
-                <div class="open-government-licence">
-                    <h2><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence</a></h2>
-                    <p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v2.0</a>, except where otherwise stated</p>
-                </div>
-            </div>
-
-            <div class="copyright">
-                <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">© Crown copyright</a>
-            </div>
+          <div class="open-government-licence">
+            <h2>
+              <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence</a>
+            </h2>
+            <p>All content is available under the
+              <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v2.0</a>, except where otherwise stated</p>
+          </div>
         </div>
+
+        <div class="copyright">
+          <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">© Crown copyright</a>
+        </div>
+      </div>
     </div>
 
-</footer>
+  </footer>
 </template>

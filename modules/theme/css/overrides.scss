@@ -1,4 +1,14 @@
 #global-header {
+  .header-wrapper{
+    max-width: 1200px;
+  }
+  .username{
+    float: right;
+    color: #fff;
+    font-size: 19px;
+line-height: 30px;
+font-weight: bold;
+  }
   #logo {
     img {
       width: auto !important;
@@ -23,4 +33,25 @@
     padding: 0;
     margin-bottom: 2em;
   }
+}
+#global-header-bar{
+    max-width: 1200px;
+}
+#footer .footer-wrapper{
+  max-width: 1200px;
+}
+#content{
+  max-width: 1200px;
+}
+.admin-ebf-search {
+  input {
+    width: 100%;
+    border: 10px solid #eee;
+    padding: 15px;
+    font-size: 2em;
+  }
+}
+
+.admin-ebf-search-results{
+  margin-top: 50px;
 }

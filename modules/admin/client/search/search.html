@@ -1,0 +1,84 @@
+<template name="admin_search">
+  <div class="admin-ebf-search">
+
+    <span class="form-label-bold">Search for an Electronic Bankruptcy Folder</span>
+    <input autocomplete="off" id="urn" name="urn" placeholder="Enter a URN" type="test" value="">
+
+  </div>
+  <div class="admin-ebf-search-results">
+
+    {{#if searched}}
+      <p class="form-label-bold">
+        Search Results
+      </p>
+    {{else}}
+      <p class="form-label-bold">
+        Showing the most recently created EBFs (Top 15)
+      </p>
+    {{/if}}
+    <table class="table table-list-search">
+      <thead>
+        <tr>
+          <th>URN</th>
+          <th>Name</th>
+          <th>Order Date</th>
+          <th>Details</th>
+          <th>Action Required</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+        {{#each ebfs}}
+          <tr>
+            <td>
+               <a href="{{pathFor 'admin-ebf-details' urn=sourceId}}">{{sourceId}}</a>
+            </td>
+            <td>
+              {{bkt_order.name}}
+            </td>
+            <td>
+              {{bkt_order.order_date}}
+            </td>
+
+            <td>
+              {{bkt_order.summary}}
+            </td>
+            <td>
+              None
+            </td>
+          </tr>
+        {{/each}}
+        <!-- <tr>
+          <td>A25D-AA64-68HH</td>
+          <td>Adrian Smith</td>
+          <td>Adrian Smith residing at 3 Formal St, Birmingham</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>DD65-E6EA-88II</td>
+          <td style="white-space:nowrap">Joanne Goodie</td>
+          <td>Joanne Goodie trading as Goodie Goodie Gumdrops residing at 262 North Road, Coventry</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ASD2-256S-SDJJ</td>
+          <td>Stuart Jones</td>
+          <td>Stuart Jones</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>EHBJ-8F3M-KRPL</td>
+          <td>Kim Scarlett</td>
+          <td>Kim Scarlett, Unemployed, formerly known as Kimberly Red, of 110 High Street, Newhall, Birmingham B4</td>
+          <td><a href="ebf.html?status=approval">Upload Pending</a></td>
+        </tr>
+ -->
+
+
+
+      </tbody>
+    </table>
+
+  </div>
+</template>

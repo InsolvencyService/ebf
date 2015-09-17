@@ -20,6 +20,22 @@ EBF = Astro.Class({
     },
     updatedBy: {
       type: 'string'
+    },
+    bkt_order: {
+      type: 'object',
+      default: {}
+    },
+    'bkt_order.name': {
+      type: 'string',
+      default: ''
+    },
+    'bkt_order.summary': {
+      type: 'string',
+      default: ''
+    },
+    'hasActions': {
+      type: 'boolean',
+      default: true
     }
   }
 });
@@ -39,5 +55,6 @@ EBF.addValidators({
   sourceId: [
     Validators.required(),
     Validators.string(),
+    Validators.unique()
   ]
 });

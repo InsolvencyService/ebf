@@ -18,8 +18,10 @@ HandleCheckedRequest = function(data, res, callback) {
   } catch (e) {
     res.statusCode = 400;
     var message = e.message;
-    if (e.reason){
-      message = JSON.stringify({errors: e.reason});
+    if (e.reason) {
+      message = JSON.stringify({
+        errors: e.reason
+      });
     }
     res.end(message);
   }

@@ -9,6 +9,7 @@ meteorhacks:npm
 fourseven:scss
 
 kadira:flow-router
+arillo:flow-router-helpers
 kadira:blaze-layout
 meteorhacks:picker
 

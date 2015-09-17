@@ -1,18 +1,19 @@
 <template name="admin_search">
   <div class="admin-ebf-search">
 
-    <span class="form-label-bold">Search for an Electronic Bankruptcy Folder</span>
+  <h1 class="form-title heading-large">Search for an Electronic Bankruptcy Folder</h1>
     <input autocomplete="off" id="urn" name="urn" placeholder="Enter a URN" type="test" value="">
 
   </div>
   <div class="admin-ebf-search-results">
 
     {{#if searched}}
-      <p class="form-label-bold">
+      <h1 class="form-title heading-large">
         Search Results
-      </p>
+      </h1>
+
     {{else}}
-      <p class="form-label-bold">
+      <p class=" heading-medium">
         Showing the most recently created EBFs (Top 15)
       </p>
     {{/if}}

@@ -1,5 +1,27 @@
 <template name="admin_ebf_details">
   <h1 class="form-title heading-large">Notifications and documents</h1>
-  
-  DETAILS GO HERE {{ebf.bkt_order.name}}
+  <div class="row">
+    <div class="col-sm-3 table-label" >Name
+    </div>
+    <div class="col-sm-7 table-field" style="">{{ebf.bktOrder.name}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3" style="padding-top:15px">Order date
+    </div>
+    <div class="col-sm-7" style="font-weight:bold"> {{moFormat ebf.bktOrder.orderDate 'DD MMM YYYY'}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3" style="padding-top:15px">Description
+    </div>
+    <div class="col-sm-7" style="font-weight:bold">Kim Scarlett, Unemployed, formerly known as Kimberly Red, of 110 High Street, Newhall, Birmingham B4 3TT is adjudged bankrupt
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3" style="padding-top:15px">Unique reference number
+    </div>
+    <div class="col-sm-7" style="font-weight:bold">EHBJ-8F3M-KRPL
+    </div>
+  </div>
 </template>

@@ -23,3 +23,5 @@ check
 
 npm-container
 twbs:bootstrap
+momentjs:moment
+lbee:moment-helpers

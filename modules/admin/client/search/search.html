@@ -1,7 +1,7 @@
 <template name="admin_search">
   <div class="admin-ebf-search">
 
-  <h1 class="form-title heading-large">Search for an Electronic Bankruptcy Folder</h1>
+    <h1 class="form-title heading-large">Search for an Electronic Bankruptcy Folder</h1>
     <input autocomplete="off" id="urn" name="urn" placeholder="Enter a URN" type="test" value="">
 
   </div>
@@ -36,14 +36,14 @@
                <a href="{{pathFor 'admin-ebf-details' urn=sourceId}}">{{sourceId}}</a>
             </td>
             <td>
-              {{bkt_order.name}}
+              {{bktOrder.name}}
             </td>
             <td>
-              {{bkt_order.order_date}}
+              {{moFormat bktOrder.orderDate 'DD MMM YYYY'}}
             </td>
 
             <td>
-              {{bkt_order.summary}}
+              {{bktOrder.summary}}
             </td>
             <td>
               None

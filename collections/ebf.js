@@ -21,17 +21,21 @@ EBF = Astro.Class({
     updatedBy: {
       type: 'string'
     },
-    bkt_order: {
+    bktOrder: {
       type: 'object',
       default: {}
     },
-    'bkt_order.name': {
+    'bktOrder.name': {
       type: 'string',
       default: ''
     },
-    'bkt_order.summary': {
+    'bktOrder.summary': {
       type: 'string',
       default: ''
+    },
+    'bktOrder.orderDate': {
+      type: 'date',
+       default: null
     },
     'hasActions': {
       type: 'boolean',

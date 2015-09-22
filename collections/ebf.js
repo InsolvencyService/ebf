@@ -41,6 +41,11 @@ EBF = Astro.Class({
       type: 'boolean',
       default: true
     }
+    ,
+    'orderDate': {
+      type: 'date',
+       default: null
+    }
   }
 });
 

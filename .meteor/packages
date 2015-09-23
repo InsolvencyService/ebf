@@ -40,3 +40,4 @@ spacebars
 cfs:standard-packages
 cfs:filesystem
 cfs:ui
+mizzao:bootboxjs

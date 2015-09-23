@@ -51,7 +51,11 @@
                   {{#unless this.isUploaded}}
                     {{> FS.UploadProgressBar bootstrap=true class='progress-bar-success progress-bar-striped active' showPercent=true}}
                   {{else}}
-                    <div class="label label-info label-as-badge">Document</div>
+                    {{#if isNotice }}
+                      <div class="label label-info label-as-badge">Notice</div>
+                    {{else}}
+                      <div class="label label-success label-as-badge">Document</div>
+                    {{/if}}
                   {{/unless}}
 
                 </td>
@@ -63,7 +67,7 @@
 
                 </td>
                 <td>
-                  TODO
+                  Floyd Price
                 </td>
               </tr>
               {{/each}}

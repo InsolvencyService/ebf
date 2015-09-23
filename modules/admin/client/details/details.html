@@ -1,7 +1,7 @@
 <template name="admin_ebf_details">
   <h1 class="form-title heading-large">Notifications and documents</h1>
   <div class="row">
-    <div class="col-sm-3 table-label" >Name
+    <div class="col-sm-3 table-label">Name
     </div>
     <div class="col-sm-7 table-field" style="">{{ebf.bktOrder.name}}
     </div>
@@ -9,19 +9,139 @@
   <div class="row">
     <div class="col-sm-3" style="padding-top:15px">Order date
     </div>
-    <div class="col-sm-7" style="font-weight:bold"> {{moFormat ebf.bktOrder.orderDate 'DD MMM YYYY'}}
+    <div class="col-sm-7" style="font-weight:bold">
+      {{moFormat ebf.bktOrder.orderDate 'DD MMM YYYY'}}
     </div>
   </div>
   <div class="row">
     <div class="col-sm-3" style="padding-top:15px">Description
     </div>
-    <div class="col-sm-7" style="font-weight:bold">Kim Scarlett, Unemployed, formerly known as Kimberly Red, of 110 High Street, Newhall, Birmingham B4 3TT is adjudged bankrupt
+    <div class="col-sm-7" style="font-weight:bold">{{ebf.bktOrder.summary}}
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-3" style="padding-top:15px">Unique reference number
+    <div class="col-sm-3" style="padding-top:15px">BKT Number
     </div>
-    <div class="col-sm-7" style="font-weight:bold">EHBJ-8F3M-KRPL
+    <div class="col-sm-7" style="font-weight:bold">{{ebf.sourceId}}
+    </div>
+  </div>
+
+  <div class="row file-browser">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading" style="display:none">
+          <h3 class="panel-title">Notifications and documents</h3>
+        </div>
+        <div class="panel-body">
+          <table>
+            <thead>
+              <tr>
+                <td>&nbsp;</td>
+                <td>Name</td>
+                <td>Date filed</td>
+                <td>Filed by</td>
+              </tr>
+
+            </thead>
+
+            <tbody>
+              {{#each ebf_files}}
+              <tr>
+                <td>
+                  {{#unless this.isUploaded}}
+                    {{> FS.UploadProgressBar bootstrap=true class='progress-bar-success progress-bar-striped active' showPercent=true}}
+                  {{else}}
+                    <div class="label label-info label-as-badge">Document</div>
+                  {{/unless}}
+
+                </td>
+                <td>
+                  {{name}}
+                </td>
+                <td>
+                  {{moFormat uploadedAt 'DD MMM YYYY HH:mm:ss'}}
+
+                </td>
+                <td>
+                  TODO
+                </td>
+              </tr>
+              {{/each}}
+              <!-- <tr>
+                <td>
+                  <div class="label label-success label-as-badge">Notification</div>
+                </td>
+                <td><a href="#">Report to creditors</a></td>
+                <td>23/03/2015</td>
+                <td>Official receiver</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="label label-info label-as-badge">Document</div>
+                </td>
+                <td><a href="#">Bankruptcy Application</a></td>
+                <td>28/02/2015</td>
+                <td>Applicant</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="label label-info label-as-badge">Document</div>
+                </td>
+                <td><a href="#">Bankruptcy Order</a></td>
+                <td>28/01/2015</td>
+                <td>Adjudicator</td>
+              </tr>
+
+              <tr class="text text-muted" id="uploadwaiting" style="display:none">
+                <td>
+                  <span class="label label-danger label-as-badge">Awaiting Approval</span>
+                </td>
+                <td class="text-muted">Proof of debt</td>
+                <td class="text-muted">08/04/2015</td>
+                <td class="text-muted">HSBC</td>
+              </tr> -->
+
+              <tr class="text text-muted" id="approval" style="display:none">
+                <td>
+
+                  <a href="ebf.html?status=approved">
+                    <button type="button" class="btn btn-success btn-circle" title="Approve"><i class="glyphicon glyphicon-ok"></i></button>
+                  </a>
+                  <a href="ebf.html?status=removed">
+                    <button type="button" class="btn btn-danger btn-circle" title="Remove"><i class="glyphicon glyphicon-remove"></i></button>
+                  </a>
+
+                </td>
+                <td><a href="#">Proof of debt</a></td>
+                <td>08/04/2015</td>
+                <td>HSBC</td>
+              </tr>
+
+              <tr class="text text-muted" id="approved" style="display:none">
+                <td>
+                  <div class="label label-info label-as-badge">Document</div>
+                </td>
+                <td><a href="#">Proof of debt</a></td>
+                <td>08/04/2015</td>
+                <td>HSBC</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <div class=" text-right">
+
+            <input type="button" id="upload-btn" class="btn btn-success btn-large " value="Upload a document">
+            <input class="file-upload-input hidden" id="upload-field" type="file" />
+
+          </div>
+
+        </div>
+      </div>
+
+
+
     </div>
   </div>
 </template>

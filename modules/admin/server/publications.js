@@ -15,3 +15,8 @@ Meteor.publish("admin_ebf", function(urn) {
     sourceId: urn
   });
 });
+
+
+Meteor.publish("ebf_files", function(_id) {
+  return EbfFiles.find({ebf: _id});
+});

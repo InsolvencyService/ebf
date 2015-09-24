@@ -12,7 +12,7 @@ Template.admin_ebf_details.helpers({
     return EBFs.findOne();
   },
   ebf_files: function() {
-    return EbfFiles.find();
+    return EbfFiles.find({}, {sort: {isUploaed: -1, uploadedAt: -1}});
   },
   isNotice: function() {
     return this.documentType == "notice";

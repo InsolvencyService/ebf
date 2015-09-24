@@ -11,7 +11,7 @@ adminRoutes.route('/', {
    }
 });
 
-adminRoutes.route('/ebf/:urn', {
+adminRoutes.route('/:urn', {
   name: 'admin-ebf-details',
   action: function() {
     BlazeLayout.render('masterLayout', {
